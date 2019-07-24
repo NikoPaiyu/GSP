@@ -3,11 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { GspLoginComponent } from 'src/app/gsp-login/gsp-login.component';
 import { GspHomeComponent } from 'src/app/gsp-home/gsp-home.component';
 
-const routes: Routes = [{
+const routes: Routes = [
+{
   path : '',
-  component: GspLoginComponent
-},{
-  path : 'home',
   component: GspHomeComponent
 }];
 
