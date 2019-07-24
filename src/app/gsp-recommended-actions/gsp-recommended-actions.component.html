@@ -1,0 +1,37 @@
+<div class="wrapper">
+
+  <div class="recommended-actions-header">
+    <h6>Recommended Actions</h6>
+    <span>Your top 6 actions displayed</span>
+  </div>
+
+  <div class="recommended-actions-content">
+
+    <ul class="recommended-actions-list">
+
+      <li *ngFor="let obj of sampleObj">
+          <div class="recommended-actions-list-header">
+            <h6>{{obj.actionTitle}}</h6>
+            <span>{{obj.actionDesc}}</span>
+          </div>
+
+          <div class="recommended-actions-list-action">
+
+            <div class="recommended-actions-list-action-info">
+              <span>{{obj.date}}</span><span>{{obj.cost}}</span>
+            </div>
+
+            <div class="recommended-actions-list-action-clear">
+              <button class="clearButton">Clear</button>
+            </div>
+
+          </div>
+
+      </li>
+
+    </ul>
+
+
+  </div>
+
+</div>

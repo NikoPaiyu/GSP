@@ -1,0 +1,110 @@
+<div class="wrapper">
+
+  <div class="opportunity-header-wrapper">
+
+    <div class="opportunity-header">
+
+      <div class="row no-gutters">
+
+        <div class="col-6">
+
+          <h6>My Opportunities</h6>
+          <span>Your daily opportunities here !</span>
+
+        </div>
+
+        <div class="col-6">
+
+          <div class="opportunity-header-actions">
+
+            <ul class="opportunity-header-actions-list">
+
+              <li>
+                  <button class="addContactImageButton"></button>
+              </li>
+
+              <li>
+                  <button class="visualPipelineImageButton"></button>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="opportunity-search">
+      <input class="formSearch" placeholder="Search by account name !">
+    </div>
+
+    <div class="opportunity-action">
+
+        <button class="roundButtonPrimary"></button>
+        <button class="roundButtonDark"></button>
+
+    </div>
+
+  </div>
+
+  <div class="opportunity-list-wrapper">
+
+      <div class="row">
+
+        <div class="col-4" *ngFor="let obj of sampleObj" >
+
+          <div class="opportunity-list-item">
+
+              <div class="opportunity-list-header">
+                  <h6>{{obj.opportunityName}}</h6>
+                  <span>{{obj.opportunityClient}}</span>
+              </div>
+
+              <div class="opportunity-list-inner">
+
+                <ul class="innerCardList">
+
+                    <li class="alert-wrapper floatLeft">
+                   
+                          <div class="row no-gutters">
+                            <div class="col-3"  *ngFor="let objj of obj.alerts ">
+                                <div [ngClass]="{'renewal': objj.title === 'Renewal',
+                                                'warning' : objj.title === 'Warning'}" class="renewal">{{objj.title}}</div>      
+                            </div>                            
+                      </div>
+                    </li>
+
+                    <li>
+                        <div class="row">
+
+                          <div class="col-8">
+                            <span class="fontSize14">{{obj.date}}</span><div class="VerticalDivider"></div> <span class="fontSize14 colorPrimary">{{obj.cost}}</span>
+                          </div>
+
+                          <div class="col-4">
+                            <span class="fontSize14">{{obj.type}}</span>
+                          </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <button class="editButton fontSize14">Edit Opportunity</button>
+                    </li>
+
+                </ul>
+
+              </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+  </div>
+
+</div>

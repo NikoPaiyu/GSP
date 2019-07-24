@@ -1,0 +1,54 @@
+@import "../../assets/_styles/variables";
+
+.login-wrapper {
+    background-color: $LightBackgroudColor;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10%;
+
+
+    .login-box {
+        margin: auto;
+        width: 350px;
+
+
+        .login-header {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+
+            h1{
+                margin-bottom: 0px;
+                font-family: $fontFamilyRegular;
+            }
+
+            span {
+                font-family: $fontFamilyLight;
+            }
+
+        }
+
+        .login-form {
+            margin-top: 20px;
+        
+        }
+
+        .login-actions {
+            text-align: center;
+            margin-top: 30px;
+
+            .primaryButton {
+                margin-bottom: 20px;
+            }
+
+            a {
+                color: $placeholderColor;
+                font-family: $fontFamilyLight;
+            }
+        }
+    }
+
+
+}

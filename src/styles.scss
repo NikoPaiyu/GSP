@@ -1,1 +1,187 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "assets/_styles/variables";
+
+* {
+    padding:0;
+    margin:0;
+}
+
+body {
+    font-family: $fontFamily;
+    overflow: hidden;
+}
+
+.formlabel {
+    margin-bottom: 5px;
+    color : $formLabelColor;
+    font-family:$fontFamilyRegular;
+    font-size: 16px;
+}
+
+.formInput {
+    color: $defaultFontColor;
+    background-color : $inputBackgroundColor;
+    height: 40px;
+    border: 0px;
+    outline: none;
+    padding-left: 15px;
+    padding-top: 9px;
+}
+
+.formSearch {
+    color: $defaultFontColor;
+    background-color : $inputBackgroundColor;
+    height: 35px;
+    border-radius: 60px;
+    border: 0px;
+    outline: none;
+    padding-left: 33px;
+    padding-top: 7px;
+    width: 400px;
+    background-image: url('./assets/icons/search.svg');
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: center left 11px;
+}
+
+.primaryButton {
+    background-color: $primaryColor;
+    color: $teritaryColor ;
+    border: 0px;
+    padding-top: 5px;
+    height: 45px;
+    border-radius: 3px;
+    font-family: $fontFamilyMedium;
+}
+
+.editButton {
+    background-color: transparent;
+    border: 0px;
+    background-image: url('./assets/icons/edit.svg');
+    background-repeat: no-repeat;
+    background-size: 11px;
+    width: 128px;
+    color: #999;
+    background-position: top 2px left 0px;
+
+}
+
+.clearButton {
+    background-color: transparent;
+    border: 0px;
+    font-family: $fontFamilyMedium;
+}
+
+.roundButtonPrimary {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: $primaryColor;
+    border: 0px;
+    background-image: url('./assets/icons/add.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+    box-shadow: 0px 3px 6px #ddd;
+    z-index: 9999999999;
+}
+
+.roundButtonDark{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: $darkBackgroudColor;
+    border: 0px;
+    background-image: url('./assets/icons/filter.svg');
+    background-repeat: no-repeat;
+    background-position: center top 14px;
+    background-size: 20px;
+    box-shadow: 0px 3px 6px #ddd;
+    z-index: 9999999999;
+}
+
+.addContactImageButton {
+    background-image: url('./assets/icons/contact.svg');
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: 40px;
+    height: 40px;
+    width: 50px;
+    border: 0px;
+}
+
+.visualPipelineImageButton {
+    background-image: url('./assets/icons/pipeline.svg');
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: 30px;
+    height: 40px;
+    width: 50px;
+    border: 0px;
+
+}
+
+
+::placeholder {
+    color: $placeholderColor;
+    font-family: $fontFamilyLight;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.fontSize14 {
+    font-size: 14px;
+}
+
+.fontSize12 {
+    font-size: 12px;
+}
+
+ul {
+    list-style: none;
+    padding:0px;
+    margin:0px;
+}
+
+.renewal {
+    height: 23px;
+    width: 66px;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 14px;
+    border-radius: 85px;
+    color: #fff;
+    background-color: #F68657;
+}
+
+.warning {
+    height: 23px;
+    width: 66px;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 14px;
+    border-radius: 85px;
+    color: #fff;
+    background-color: $waringColor ;
+    margin-left: 10px;
+}
+
+.VerticalDivider {
+    height: 7px;
+    width: 1px;
+    background-color: $dividerLine;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.colorPrimary {
+    color: $primaryColor;
+}
