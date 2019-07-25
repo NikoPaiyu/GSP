@@ -12,6 +12,10 @@ body {
     overflow: hidden;
 }
 
+.wrapper {
+    height: 100vh !important;
+}
+
 .formlabel {
     margin-bottom: 5px;
     color : $formLabelColor;
@@ -109,6 +113,7 @@ body {
     height: 40px;
     width: 50px;
     border: 0px;
+    outline: none;
 }
 
 .visualPipelineImageButton {
@@ -119,6 +124,7 @@ body {
     height: 40px;
     width: 50px;
     border: 0px;
+    outline: none;
 
 }
 
