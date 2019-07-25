@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "assets/_styles/variables";
+@import "~angular-notifier/styles.scss";
 
 * {
     padding:0;
@@ -31,6 +32,21 @@ body {
     outline: none;
     padding-left: 15px;
     padding-top: 9px;
+    font-family: $fontFamilyLight;
+}
+
+.formSelect {
+  color: $defaultFontColor;
+  background-color : transparent;
+  height: 40px;
+  border: 2px solid #eee;
+  outline: none;
+  padding-left: 15px;
+  padding-top: 6px;
+  background-image: url('./assets/icons/downArrow.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: center right 15px;
 }
 
 .formSearch {
@@ -51,9 +67,11 @@ body {
 
 .primaryButton {
     background-color: $primaryColor;
-    color: $teritaryColor ;
+    color: $LightBackgroudColor ;
     border: 0px;
     padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
     height: 45px;
     border-radius: 3px;
     font-family: $fontFamilyMedium;
@@ -74,7 +92,12 @@ body {
 .clearButton {
     background-color: transparent;
     border: 0px;
-    font-family: $fontFamilyMedium;
+    font-family: $fontFamilyRegular;
+  cursor: pointer;
+}
+
+.clearButton:hover {
+  font-family: $fontFamilyMedium;
 }
 
 .roundButtonPrimary {
@@ -88,7 +111,9 @@ body {
     background-position: center;
     background-size: 22px;
     box-shadow: 0px 3px 6px #ddd;
-    z-index: 9999999999;
+  z-index: 100;
+  cursor: pointer;
+  outline: none;
 }
 
 .roundButtonDark{
@@ -102,7 +127,7 @@ body {
     background-position: center top 14px;
     background-size: 20px;
     box-shadow: 0px 3px 6px #ddd;
-    z-index: 9999999999;
+    z-index: 100;
 }
 
 .addContactImageButton {
@@ -126,6 +151,16 @@ body {
     border: 0px;
     outline: none;
 
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: $formLabelColor;
+  font-family: $fontFamilyRegular;
+  border: 0px;
+  height: 45px;
+  padding-top: 5px;
+  margin-left: 15px !important;
 }
 
 
@@ -191,3 +226,48 @@ ul {
 .colorPrimary {
     color: $primaryColor;
 }
+
+.notifier__notification--material {
+  padding-top:16px !important;
+}
+
+
+/*
+Modal Custom Css
+ */
+
+.modal-title {
+   font-family: $fontFamilyMedium;
+  font-size: 24px;
+
+}
+
+.modal-header {
+  border-bottom: 0px !important;
+  padding:2rem;
+  padding-bottom: 1.5rem;
+}
+
+.modal-body {
+  padding:2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.modal-footer {
+  border-top: 0px !important;
+  padding:2rem;
+  padding-top: 1.5rem;
+  justify-content: flex-start;
+}
+
+/*
+Select Default CSS
+ */
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+

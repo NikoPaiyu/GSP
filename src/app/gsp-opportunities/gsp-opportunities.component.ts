@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class GspOpportunitiesComponent implements OnInit {
 
 
+  modalNameFromParent = 'exampleModal';
+
   sampleObj = [
     {
       'opportunityName' : 'EQTCorporation',

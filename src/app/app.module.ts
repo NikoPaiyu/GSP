@@ -7,6 +7,9 @@ import { GspLoginComponent } from './gsp-login/gsp-login.component';
 import { GspRecommendedActionsComponent } from './gsp-recommended-actions/gsp-recommended-actions.component';
 import { GspOpportunitiesComponent } from './gsp-opportunities/gsp-opportunities.component';
 import {RouterModule} from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NotifierModule } from 'angular-notifier';
+import { GspDialogsComponent } from './gsp-dialogs/gsp-dialogs.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +17,15 @@ import {RouterModule} from '@angular/router';
     GspHomeComponent,
     GspLoginComponent,
     GspRecommendedActionsComponent,
-    GspOpportunitiesComponent
+    GspOpportunitiesComponent,
+    GspDialogsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule,
+    NotifierModule
   ],
   providers: [],
   bootstrap: [AppComponent]

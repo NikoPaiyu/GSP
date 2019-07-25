@@ -1,0 +1,39 @@
+@import "../../assets/_styles/variables";
+
+.modal-header {
+  .close {
+    background-image: url('../../assets/icons/close.svg');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center top 18px;
+    height: 50px;
+    width: 50px;
+    opacity: 1 !important;
+    padding: 0.1rem;
+    outline: none;
+  }
+}
+
+.modal-body{
+  .form-group {
+    margin-bottom: 1.5rem;
+
+
+    .formlabel {
+      font-family: $fontFamilyLight;
+    }
+
+    .formInput {
+      height: 50px;
+      font-family: $fontFamilyRegular;
+    }
+
+    .formSelect {
+      height: 50px;
+    }
+  }
+}
+
+
+
+

@@ -3,15 +3,15 @@
   <div class="recommended-actions-header">
     <h6>Recommended Actions</h6>
     <span>Your top 6 actions displayed</span>
+
   </div>
 
   <div class="recommended-actions-content">
-
     <ul class="recommended-actions-list">
 
-      <li *ngFor="let obj of sampleObj">
+      <li  *ngFor="let obj of sampleObj; let i  =  index">
           <div class="recommended-actions-list-header">
-            <h6>{{obj.actionTitle}}</h6>
+            <h6 >{{obj.actionTitle}}</h6>
             <span>{{obj.actionDesc}}</span>
           </div>
 
@@ -22,7 +22,7 @@
             </div>
 
             <div class="recommended-actions-list-action-clear">
-              <button class="clearButton">Clear</button>
+              <button class="clearButton" (click)="clearRecommendedActionList(i , obj)">Clear</button>
             </div>
 
           </div>
