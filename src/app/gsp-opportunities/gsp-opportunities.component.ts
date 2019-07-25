@@ -134,6 +134,76 @@ export class GspOpportunitiesComponent implements OnInit {
       'date' : 'April 2019',
       'type' : 'B/Develop',
       'cost' : 'USD289,637.00'
+    },
+    {
+      'opportunityName' : 'EQTCorporation',
+      'opportunityClient' : 'Karl Coke',
+      'alerts' : 
+      [{
+          'title'  : 'Renewal'
+      },  
+      {
+        'title'  : 'Warning'
+      }],
+      'date' : 'April 2019',
+      'type' : 'B/Develop',
+      'cost' : 'USD289,637.00'
+    },
+    {
+      'opportunityName' : 'EQTCorporation',
+      'opportunityClient' : 'Karl Coke',
+      'alerts' : 
+      [{
+          'title'  : 'Renewal'
+      },  
+      {
+        'title'  : 'Warning'
+      }],
+      'date' : 'April 2019',
+      'type' : 'B/Develop',
+      'cost' : 'USD289,637.00'
+    },
+    {
+      'opportunityName' : 'EQTCorporation',
+      'opportunityClient' : 'Karl Coke',
+      'alerts' : 
+      [{
+          'title'  : 'Renewal'
+      },  
+      {
+        'title'  : 'Warning'
+      }],
+      'date' : 'April 2019',
+      'type' : 'B/Develop',
+      'cost' : 'USD289,637.00'
+    },
+    {
+      'opportunityName' : 'EQTCorporation',
+      'opportunityClient' : 'Karl Coke',
+      'alerts' : 
+      [{
+          'title'  : 'Renewal'
+      },  
+      {
+        'title'  : 'Warning'
+      }],
+      'date' : 'April 2019',
+      'type' : 'B/Develop',
+      'cost' : 'USD289,637.00'
+    },
+    {
+      'opportunityName' : 'EQTCorporation',
+      'opportunityClient' : 'Karl Coke',
+      'alerts' : 
+      [{
+          'title'  : 'Renewal'
+      },  
+      {
+        'title'  : 'Warning'
+      }],
+      'date' : 'April 2019',
+      'type' : 'B/Develop',
+      'cost' : 'USD289,637.00'
     }
     
   ]

@@ -70,11 +70,10 @@ width: 100%;
 
 .opportunity-list-wrapper {
     padding: 20px;
-    height: 600px;
+    height: calc(100vh - 50px);
     padding-top: 10px;
     overflow: scroll;
-
-
+    padding-bottom: 130px;
 
     .opportunity-list-item {
         background-color:  $LightBackgroudColor;
