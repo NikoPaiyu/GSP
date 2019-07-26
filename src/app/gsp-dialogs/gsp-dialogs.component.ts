@@ -7,9 +7,11 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class GspDialogsComponent implements OnInit {
 
-  @Input() id ;
+  @Input() opportunityid ;
+  @Input() filterid ;
 
   constructor() { }
+
   ngOnInit() {
   }
 
