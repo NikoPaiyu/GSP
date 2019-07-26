@@ -1,0 +1,27 @@
+{
+  "snow": {
+    "instance": "dev71249.service-now.com",
+    "auth": "Basic YWRtaW46MEp0U3pMcm9FazNL",
+    "endpoint": "x_174999_ll_index.do"
+  },
+  "application": {
+    "name": "AUG03",
+    "scope": "x_174999_ll",
+    "sys_id": "04ce72c9c0a8016600b5b7f75ac67b5b"
+  },
+  "files": {
+    "html": {
+      "index": "c441869adbf23300b5c39444ca961906"
+    },
+    "js": {
+      "inline": "",
+      "polyfills": "1b47429edbf23300b5c39444ca961986",
+      "vendor": "",
+      "main": "ddb7469edbf23300b5c39444ca96199f",
+      "runtime": "7ae74a5edbf23300b5c39444ca96194d"
+    },
+    "css": {
+      "styles": "8d580e9edbf23300b5c39444ca96194f"
+    }
+  }
+}
