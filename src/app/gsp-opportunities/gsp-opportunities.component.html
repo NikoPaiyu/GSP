@@ -24,7 +24,7 @@
               </li>
 
               <li>
-                  <button class="visualPipelineImageButton"></button>
+                  <button routerLink="/Pipeline" class="visualPipelineImageButton"></button>
               </li>
 
             </ul>
@@ -43,8 +43,8 @@
 
     <div class="opportunity-action">
 
-        <button class="roundButtonPrimary" data-toggle="modal" data-target="#opportunityModal"></button>
-        <button class="roundButtonDark" data-toggle="modal" data-target="#filterModal"></button>
+        <button class="roundButtonPrimary addIcon" data-toggle="modal" data-target="#opportunityModal"></button>
+        <button class="roundButtonDark filterIcon" data-toggle="modal" data-target="#filterModal"></button>
 
     </div>
 
@@ -68,12 +68,12 @@
                 <ul class="innerCardList">
 
                     <li class="alert-wrapper floatLeft">
-                   
-                          <div class="row no-gutters">
-                            <div class="col-3"  *ngFor="let objj of obj.alerts ">
+
+                          <div class="row ">
+                            <div class="col-md-3"  *ngFor="let objj of obj.alerts ">
                                 <div [ngClass]="{'renewal': objj.title === 'Renewal',
-                                                'warning' : objj.title === 'Warning'}" class="renewal">{{objj.title}}</div>      
-                            </div>                            
+                                                'warning' : objj.title === 'Warning'}" class="renewal">{{objj.title}}</div>
+                            </div>
                       </div>
                     </li>
 
@@ -92,7 +92,7 @@
                     </li>
 
                     <li>
-                        <button class="editButton fontSize14">Edit Opportunity</button>
+                        <button class="detailViewButton fontSize14">Detail View</button>
                     </li>
 
                 </ul>

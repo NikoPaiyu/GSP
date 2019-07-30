@@ -1,0 +1,96 @@
+@import '../../assets/_styles/variables';
+
+.header {
+  background-color: $color-tertiary;
+  padding-top: 25px;
+  padding-bottom: 0px;
+
+  .header-first {
+    padding-bottom: 15px;
+
+    .header-title {
+      h6 {
+        font-size: $header-title-font-size;
+        color: $font-default-color;
+        font-family: $font-primary-medium;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: $header-subtitle-font-size;
+        font-family: $font-primary-light;
+        color: $font-secondary-color;
+      }
+    }
+
+  }
+
+  .header-select {
+      display: flex;
+      justify-content:flex-end ;
+      width: 100%;
+
+    .header-select-list {
+      width: 100%;
+
+      li {
+        display: inline-block;
+        width: 100%;
+
+        .formSelect {
+          width: 49%;
+          height: 40px;
+          margin-right: 9px;
+          padding-top: 6px;
+
+          &:nth-child(2) {
+            margin-right: 0px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  .divider {
+    width: 100%;
+    background-color: #eee;
+    height: 1px;
+  }
+
+  .header-second {
+    padding-top: 5px;
+
+
+    .pipeline-action {
+      display: flex;
+      justify-content: flex-end;
+
+      .pipeline-action-list {
+          position: absolute;
+          top: 13px;
+
+        li {
+          display: inline-block;
+
+
+
+          &:nth-child(2){
+            margin-right: 10px;
+
+          }
+          &:nth-child(1){
+            margin-right: 5px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
+

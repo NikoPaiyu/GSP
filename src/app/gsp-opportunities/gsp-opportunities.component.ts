@@ -14,10 +14,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -28,10 +28,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -42,10 +42,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -56,10 +56,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -70,10 +70,8 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
-      [{
-          'title'  : 'Renewal'
-      },  
+      'alerts' :
+      [
       {
         'title'  : 'Warning'
       }],
@@ -84,10 +82,8 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
-      [{
-          'title'  : 'Renewal'
-      },  
+      'alerts' :
+      [
       {
         'title'  : 'Warning'
       }],
@@ -98,10 +94,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -112,10 +108,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -126,10 +122,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -140,10 +136,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -154,10 +150,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -168,10 +164,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -182,10 +178,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -196,10 +192,10 @@ export class GspOpportunitiesComponent implements OnInit {
     {
       'opportunityName' : 'EQTCorporation',
       'opportunityClient' : 'Karl Coke',
-      'alerts' : 
+      'alerts' :
       [{
           'title'  : 'Renewal'
-      },  
+      },
       {
         'title'  : 'Warning'
       }],
@@ -207,7 +203,7 @@ export class GspOpportunitiesComponent implements OnInit {
       'type' : 'B/Develop',
       'cost' : 'USD289,637.00'
     }
-    
+
   ]
 
 

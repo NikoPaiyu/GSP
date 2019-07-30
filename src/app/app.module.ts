@@ -10,6 +10,10 @@ import {RouterModule} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NotifierModule } from 'angular-notifier';
 import { GspDialogsComponent } from './gsp-dialogs/gsp-dialogs.component';
+import { GspPipelineComponent } from './gsp-pipeline/gsp-pipeline.component';
+import { GspPipilinebytimeComponent } from './gsp-pipilinebytime/gsp-pipilinebytime.component';
+import { GspPipilinebystageComponent } from './gsp-pipilinebystage/gsp-pipilinebystage.component';
+import { GspHeaderComponent } from './gsp-header/gsp-header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { GspDialogsComponent } from './gsp-dialogs/gsp-dialogs.component';
     GspLoginComponent,
     GspRecommendedActionsComponent,
     GspOpportunitiesComponent,
-    GspDialogsComponent
+    GspDialogsComponent,
+    GspPipelineComponent,
+    GspPipilinebytimeComponent,
+    GspPipilinebystageComponent,
+    GspHeaderComponent
   ],
   imports: [
     BrowserModule,

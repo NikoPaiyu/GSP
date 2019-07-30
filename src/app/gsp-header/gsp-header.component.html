@@ -1,0 +1,103 @@
+<div class="header">
+
+  <div class="header-first">
+
+    <div class="container">
+
+      <div class="row no-gutters">
+
+        <div class="col-md-6">
+
+          <div class="header-title">
+            <h6>Pipeline</h6>
+            <span>See changes by time and stage</span>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+
+          <div class="header-select">
+
+              <ul class="header-select-list">
+
+                <li>
+                <select class="formSelect">
+                  <option value="">Type</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+
+                  <select class="formSelect">
+                    <option value="">Program</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+
+                </li>
+
+              </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="header-second">
+
+    <div class="container">
+
+      <div class="row no-gutters">
+
+
+        <div class="col-md-6">
+
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" (click)="getTabPipeLineTime('pipeLineByName')" href="#pipeLineByName">Pipeline By Time</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" (click)="getTabPipeLineStage('pipeLineByStage')"  href="#pipeLineByStage">Pipeline By Stage</a>
+            </li>
+          </ul>
+
+        </div>
+
+
+        <div class="col-md-6">
+
+          <div class="pipeline-action">
+
+            <ul class="pipeline-action-list">
+
+              <li>
+                <button class="roundButtonDark refreshIcon" ></button>
+              </li>
+              <li>
+                <button class="roundButtonDark filterIcon " ></button>
+              </li>
+              <li>
+                <button class="roundButtonPrimary addIcon" ></button>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

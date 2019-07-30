@@ -4,6 +4,7 @@
 background-color: $backgroudColor;
 height: 100%;
 width: 100%;
+  overflow: hidden;
 
 
 .opportunity-header-wrapper {
@@ -96,7 +97,7 @@ width: 100%;
                 margin-bottom: 0px;
                 font-size: 20px;
             }
-    
+
             span {
                 font-size: 16px;
                 color  : $formLabelColor ;
@@ -115,7 +116,7 @@ width: 100%;
                     border-top: 0px solid #eee;
                     padding-bottom: 10px;
                 }
-                
+
                 &:nth-child(3){
                     padding-bottom: 0px;
                 }

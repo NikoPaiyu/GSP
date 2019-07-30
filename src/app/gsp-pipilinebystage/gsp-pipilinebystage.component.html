@@ -1,0 +1,43 @@
+<div class="stage-list">
+
+  <div class="row">
+
+    <div class="col" *ngFor="let stages of stageListName">
+      <div class="stage-list-item">
+        <h6>{{stages.title}}</h6>
+        <span [ngStyle]="{'color' : getStageColor(stages.title)}">{{stages.amount}}</span>
+      </div>
+      <div class="stage-list-item-border" [ngStyle]="{'background-color' : getStageColor(stages.title)}"></div>
+
+      <div class="substage-list-item" *ngFor="let subStage of stages.suspect">
+
+          <div class="substage-list-item-header">
+              <h4>{{subStage.title}}</h4>
+              <h5>{{subStage.author}}</h5>
+              <h6>{{subStage.cost}}</h6>
+          </div>
+
+          <div class="substage-list-item-inner">
+            <ul class="substage-list-item-inner-list">
+              <li >
+                <span>{{subStage.subList.company}}</span>
+              </li>
+              <li>
+                <span>{{subStage.subList.date}}</span>
+              </li>
+              <li>
+                <div [ngStyle]="{'background-color' : getStageColor(stages.title)}" class="substage-list-item-inner-list-type">
+                  <span>{{subStage.subList.type}}</span> <span>{{subStage.subList.days}}</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>

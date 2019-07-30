@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "assets/_styles/variables";
+@import "assets/_styles/_variables";
+@import "assets/_styles/_base";
 @import "~angular-notifier/styles.scss";
 
 * {
@@ -9,8 +10,13 @@
 }
 
 body {
-    font-family: $fontFamily;
-    overflow: hidden;
+    font-family: $font-primary , $font-secondary ;
+    //overflow: hidden;
+    background-color: $color-light;
+}
+
+button {
+  outline: none !important;
 }
 
 .wrapper {
@@ -18,178 +24,300 @@ body {
 }
 
 .formlabel {
+    color : $input-element-label-color;
+    font-family:$font-primary-regular;
+    font-size: $input-element-label-font-size;
     margin-bottom: 5px;
-    color : $formLabelColor;
-    font-family:$fontFamilyRegular;
-    font-size: 16px;
 }
 
 .formInput {
-    color: $defaultFontColor;
-    background-color : $inputBackgroundColor;
-    height: 40px;
-    border: 0px;
+    color: $input-element-font-color;
+    background-color :$input-element-background-color;
+    height: $input-element-height;
+    border: $input-element-border-color;
+    padding-left: $input-element-padding-left;
+    padding-top: $input-element-padding-top;
+    font-family: $input-element-font-family;
     outline: none;
-    padding-left: 15px;
-    padding-top: 9px;
-    font-family: $fontFamilyLight;
+
+    &::placeholder {
+      color: $color-placeholder;
+      font-family: $font-primary-light;
+    }
+
 }
 
 .formSelect {
-  color: $defaultFontColor;
-  background-color : transparent;
-  height: 40px;
-  border: 2px solid #eee;
+  color: $select-element-font-color;
+  background-color : $select-element-background-color;
+  height : $select-element-height;
+  border: $select-element-border;
+  padding-left : $select-element-padding-left;
+  padding-top: $select-element-padding-top;
+  background-repeat: $select-background-repeat;
+  background-size: $select-background-image-size;
+  background-position: $select-background-image-position;
+  background-image: url('assets/icons/downArrow.svg');
   outline: none;
-  padding-left: 15px;
-  padding-top: 6px;
-  background-image: url('./assets/icons/downArrow.svg');
-  background-repeat: no-repeat;
-  background-size: 12px;
-  background-position: center right 15px;
 }
 
 .formSearch {
-    color: $defaultFontColor;
-    background-color : $inputBackgroundColor;
-    height: 35px;
-    border-radius: 60px;
-    border: 0px;
-    outline: none;
-    padding-left: 33px;
-    padding-top: 7px;
+    color: $search-element-font-color ;
+    background-color : $search-element-background-color;
+    height: $search-element-height;
+    border-radius: $search-element-border-radius;
+    border: $search-element-border;
+    padding-left: $search-element-padding-left;
+    padding-top:  $search-element-padding-top;
+    background-repeat: $select-background-repeat;
+    background-size: $search-background-image-size;
+    background-position: $search-background-image-position;
+    background-image: url('assets/icons/search.svg');
     width: 400px;
-    background-image: url('./assets/icons/search.svg');
-    background-repeat: no-repeat;
-    background-size: 14px;
-    background-position: center left 11px;
+    outline: none;
 }
 
 .primaryButton {
-    background-color: $primaryColor;
-    color: $LightBackgroudColor ;
-    border: 0px;
-    padding-top: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 45px;
-    border-radius: 3px;
-    font-family: $fontFamilyMedium;
+    background-color: $button-element-background-primary-color;
+    color: $button-element-font-color-light ;
+    padding-top: $button-element-padding-top;
+    padding-left: $button-element-padding-left ;
+    padding-right: $button-element-padding-right;
+    height: $button-element-height;
+    border-radius: $button-element-radius;
+    font-family: $font-primary-medium ;
+    border: 0;
 }
 
 .editButton {
-    background-color: transparent;
-    border: 0px;
-    background-image: url('./assets/icons/edit.svg');
-    background-repeat: no-repeat;
-    background-size: 11px;
-    width: 128px;
-    color: #999;
-    background-position: top 2px left 0px;
+    background-color: $editbutton-element-backgroung-color;
+    border: $editbutton-element-border;
+    background-repeat: $editbutton-background-repeat;
+    background-size: $editbutton-background-image-size;
+    padding-left: $editbutton-element-padding-left;
+    padding-right: $editbutton-element-padding-right;
+    color: $editbutton-element-font-color-grey;
+    background-position: $editbutton-background-image-position;
+    background-image: url('assets/icons/edit.svg');
+}
 
+.detailViewButton {
+  background-color: $detailViewbutton-element-backgroung-color;
+  border: $detailViewbutton-element-border;
+  background-repeat: $detailViewbutton-background-repeat;
+  background-size: $detailViewbutton-background-image-size;
+  padding-left: $detailViewbutton-element-padding-left;
+  padding-right: $detailViewbutton-element-padding-right;
+  color: $detailViewbutton-element-font-color-grey;
+  background-position: $detailViewbutton-background-image-position;
+  background-image: url('assets/icons/rightArrow.svg');
 }
 
 .clearButton {
-    background-color: transparent;
-    border: 0px;
-    font-family: $fontFamilyRegular;
-  cursor: pointer;
+    background-color: $color-transparent;
+    border: $clearButton-element-border ;
+    font-family: $font-primary-regular;
+    cursor: pointer;
 }
 
 .clearButton:hover {
-  font-family: $fontFamilyMedium;
+  font-family: $font-primary-medium;
+}
+
+.cancelButton {
+  background-color: $color-transparent;
+  color: $color-label;
+  border: $clearButton-element-border;
+  height: $clearButton-element-height;
+  padding-top: $clearButton-element-padding-top;
+  font-family: $font-primary-regular;
+  margin-left: 15px !important;
 }
 
 .roundButtonPrimary {
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: $primaryColor;
-    border: 0px;
-    background-image: url('./assets/icons/add.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 22px;
-    box-shadow: 0px 3px 6px #ddd;
-  z-index: 100;
-  cursor: pointer;
-  outline: none;
-}
-
-.roundButtonDark{
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    background-color: $darkBackgroudColor;
-    border: 0px;
-    background-image: url('./assets/icons/filter.svg');
-    background-repeat: no-repeat;
-    background-position: center top 14px;
-    background-size: 20px;
-    box-shadow: 0px 3px 6px #ddd;
+    height: $roundbutton-element-height ;
+    width:  $roundbutton-element-width;
+    border-radius: $roundbutton-element-radius;
+    box-shadow: $roundbutton-element-box-shadow ;
+    background-color: $roundbutton-element-primary-background;
+    border: $roundbutton-element-border;
+    cursor: pointer;
+    outline: none;
     z-index: 100;
 }
 
+.roundButtonDark{
+  height: $roundbutton-element-secondary-height;
+  width: $roundbutton-element-secondary-width;
+  border-radius: $roundbutton-element-radius;
+  background-color: $roundbutton-element-secondary-background;
+  border: $roundbutton-element-border;
+  box-shadow: $roundbutton-element-box-shadow;
+  cursor: pointer;
+  outline: none;
+  z-index: 100;
+}
+
+/*
+    Rounded Button Element Icons
+*/
+
+.addIcon {
+  background-image: url('./assets/icons/add.svg');
+  background-repeat: $primary-icon-background-repeat;
+  background-position: $primary-icon-background-image-position;
+  background-size: $primary-icon-background-image-size;
+}
+
+.filterIcon {
+  background-image: url('./assets/icons/filter.svg');
+  background-repeat: $secondary-icon-background-repeat;
+  background-position: $secondary-icon-background-image-position ;
+  background-size: $secondary-icon-background-image-size;
+}
+
+.refreshIcon {
+  background-image: url('./assets/icons/refresh.svg');
+  background-repeat: $secondary-icon-background-repeat;
+  background-position: center top 10px ;
+  background-size: $secondary-icon-background-image-size;
+}
+
+/*
+    Missclennious Button Element Icons
+*/
+
 .addContactImageButton {
+    background-repeat: $element-background-no-repeat;
+    background-position: $element-background-position-center ;
+    border: $element-no-border ;
     background-image: url('./assets/icons/contact.svg');
-    background-repeat: no-repeat;
-    background-position: center ;
     background-size: 40px;
     height: 40px;
     width: 50px;
-    border: 0px;
     outline: none;
 }
 
 .visualPipelineImageButton {
+    background-repeat: $element-background-no-repeat;
+    background-position: $element-background-position-center ;
+    border: $element-no-border ;
     background-image: url('./assets/icons/pipeline.svg');
-    background-repeat: no-repeat;
-    background-position: center ;
     background-size: 30px;
     height: 40px;
     width: 50px;
-    border: 0px;
     outline: none;
-
 }
 
-.cancelButton {
-  background-color: transparent;
-  color: $formLabelColor;
-  font-family: $fontFamilyRegular;
-  border: 0px;
-  height: 45px;
-  padding-top: 5px;
-  margin-left: 15px !important;
-}
+/*
+    Pipeline By  Stage
+*/
 
+.stage-list {
+    margin-bottom: 30px;
 
-::placeholder {
-    color: $placeholderColor;
-    font-family: $fontFamilyLight;
-}
+  .stage-list-item {
+    background-color: $color-tertiary;
+    padding: 15px 15px 9px;
+    position: sticky;
+    top: 0;
 
-.displayBlock {
-    display: block;
-}
+    h6 {
+      font-family: $font-primary-regular;
+      color: $font-default-color ;
+      margin-bottom: 0px;
+      font-size: 18px;
+    }
 
-.width100 {
+    span {
+      font-size: 16px;
+    }
+
+  }
+
+  .stage-list-item-border{
     width: 100%;
+    border-radius: 100px;
+    height: 5px;
+    padding: 0px;
+    margin-top: 5px;
+    position: sticky;
+    top: 0;
+  }
+
+  .substage-list-item {
+    background-color: $color-tertiary;
+    padding: 15px 15px 9px;
+    margin-top: 30px;
+
+    .substage-list-item-header {
+
+      h4 {
+        font-size: 16px;
+        margin-bottom: 0px;
+        font-family: $font-primary-regular;
+        color: $font-default-color;
+      }
+
+      h5 {
+        font-size: 14px;
+        margin-bottom: 0px;
+        font-family: $font-primary-light;
+        color: $font-default-color;
+      }
+
+      h6 {
+        font-size: 12px;
+        margin-bottom: 0px;
+        font-family: $font-primary-light;
+        color: $font-secondary-color;
+      }
+
+
+    }
+
+    .substage-list-item-inner {
+        margin-top: 5px;
+
+      .substage-list-item-inner-list {
+
+        li {
+          height: 20px;
+          border-bottom:1px solid #eee;
+
+          &:nth-child(3){
+            border-bottom: 0;
+          }
+
+          .substage-list-item-inner-list-type{
+            height: 20px;
+            width: 60%;
+            border-radius: 100px;
+            color: $color-tertiary;
+            text-align: center;
+            margin-top: 5px;
+          }
+
+          span{
+            font-size: 11px;
+            font-family: $font-primary-light;
+          }
+        }
+
+      }
+
+    }
+
+
+
+
+
+
+  }
+
 }
 
-.fontSize14 {
-    font-size: 14px;
-}
 
-.fontSize12 {
-    font-size: 12px;
-}
-
-ul {
-    list-style: none;
-    padding:0px;
-    margin:0px;
-}
 
 .renewal {
     height: 23px;
@@ -211,7 +339,6 @@ ul {
     border-radius: 85px;
     color: #fff;
     background-color: $waringColor ;
-    margin-left: 10px;
 }
 
 .VerticalDivider {
@@ -227,131 +354,6 @@ ul {
     color: $primaryColor;
 }
 
-/*
-Angular Notifier
- */
-
-
-.notifier__notification--material {
-  padding-top:16px !important;
-}
-
-
-/*
-Bootstrap Modal Custom Css
- */
-
-.modal-title {
-   font-family: $fontFamilyMedium;
-  font-size: 24px;
-
-}
-
-.modal-header {
-  border-bottom: 0px !important;
-  padding:2rem;
-  padding-bottom: 1.5rem;
-}
-
-.modal-body {
-  padding:2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.modal-footer {
-  border-top: 0px !important;
-  padding:2rem;
-  padding-top: 1.5rem;
-  justify-content: flex-start;
-}
-
-/*
-Select Default CSS
- */
-
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-/*
-Checkbox Default CSS
-*/
-
-/* The container */
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.container span {
-  color: $formLabelColor;
-  font-size: 16px;
-  font-family: $fontFamilyLight;
-}
-
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  border: 2px solid #eee;
-  background-color: transparent;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  border: 2px solid #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  border: 2px solid #8283A7;
-
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  left: 8px;
-  top: 3px;
-  width: 6px;
-  height: 13px;
-  border: solid #8283A7;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+.directionRow {
+  flex-direction: column;
 }
