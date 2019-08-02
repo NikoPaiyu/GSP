@@ -14,6 +14,8 @@ import { GspPipelineComponent } from './gsp-pipeline/gsp-pipeline.component';
 import { GspPipilinebytimeComponent } from './gsp-pipilinebytime/gsp-pipilinebytime.component';
 import { GspPipilinebystageComponent } from './gsp-pipilinebystage/gsp-pipilinebystage.component';
 import { GspHeaderComponent } from './gsp-header/gsp-header.component';
+import {GoTopButtonModule} from 'ng2-go-top-button';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { GspHeaderComponent } from './gsp-header/gsp-header.component';
     AppRoutingModule,
     RouterModule,
     BrowserAnimationsModule,
-    NotifierModule
+    NotifierModule,
+    GoTopButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -134,6 +134,19 @@ button {
   margin-left: 15px !important;
 }
 
+.backButton {
+  background-color: $color-transparent;
+  border: $backButton-element-border;
+  height: 30px;
+  font-family: $font-primary-regular;
+  background-image: url('assets/icons/backArroa.svg');
+  background-repeat: $element-background-no-repeat;
+  background-position: top 7px left 0px;
+  background-size: 13px;
+  width: 65px;
+  color: $color-primary;
+}
+
 .roundButtonPrimary {
     height: $roundbutton-element-height ;
     width:  $roundbutton-element-width;
@@ -156,6 +169,22 @@ button {
   cursor: pointer;
   outline: none;
   z-index: 100;
+}
+
+/*
+    Modal Close Button
+*/
+
+.close {
+  background-image: url('assets/icons/close.svg');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center top 18px;
+  height: 50px;
+  width: 50px;
+  opacity: 1 !important;
+  padding: 0.1rem;
+  outline: none;
 }
 
 /*
@@ -221,6 +250,8 @@ button {
     padding: 15px 15px 9px;
     position: sticky;
     top: 0;
+    z-index: 9999;
+
 
     h6 {
       font-family: $font-primary-regular;
@@ -243,12 +274,22 @@ button {
     margin-top: 5px;
     position: sticky;
     top: 0;
+    z-index: 9999;
   }
 
   .substage-list-item {
     background-color: $color-tertiary;
     padding: 15px 15px 9px;
     margin-top: 30px;
+    box-shadow: 0px 2px 2px #eee;
+    position: relative;
+    border-radius: 3px;
+
+
+    &:hover {
+      box-shadow: 0px 15px 5px #eee;
+      transition: all 0.5s;
+    }
 
     .substage-list-item-header {
 
@@ -356,4 +397,20 @@ button {
 
 .directionRow {
   flex-direction: column;
+}
+
+.go-top-button {
+  position: fixed;
+  cursor: pointer;
+  outline: none;
+  top: 50% !important;
+  bottom: 50%;
+  width: 35px;
+  height: 35px;
+  text-decoration: none;
+  border: none;
+  background-image: url("assets/icons/topArrow.svg") !important;
+  background-position: center  !important;
+  background-size: 10px  !important;
+  background-repeat: no-repeat  !important;
 }

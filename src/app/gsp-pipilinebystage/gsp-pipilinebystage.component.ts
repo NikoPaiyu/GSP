@@ -236,19 +236,14 @@ export class GspPipilinebystageComponent implements OnInit {
     }
   ];
 
-  stageSubList = {
-
-  };
-
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
   }
 
-  getStageColor(title){
+  getStageColor(title) {
 
-    switch(title){
+    switch (title) {
       case 'Suspect' :
         return '#D81159';
       case 'Identify' :

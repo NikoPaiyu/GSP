@@ -11,6 +11,9 @@
 
       <div class="substage-list-item" *ngFor="let subStage of stages.suspect">
 
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+
           <div class="substage-list-item-header">
               <h4>{{subStage.title}}</h4>
               <h5>{{subStage.author}}</h5>
@@ -41,3 +44,4 @@
   </div>
 
 </div>
+

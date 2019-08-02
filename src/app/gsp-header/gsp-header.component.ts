@@ -1,4 +1,6 @@
 import {Component, OnInit, Output , EventEmitter} from '@angular/core';
+import {Router} from '@angular/router';
+import { Location} from '@angular/common';
 
 @Component({
   selector: 'app-gsp-header',
@@ -10,10 +12,9 @@ export class GspHeaderComponent implements OnInit {
   @Output() pipeLineTime = new EventEmitter();
   @Output() pipeLineStage = new EventEmitter();
 
-  constructor() { }
+  constructor(private router: Router , private location: Location) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   getTabPipeLineStage(hrefPath) {
     this.pipeLineStage.next(hrefPath);
@@ -21,6 +22,10 @@ export class GspHeaderComponent implements OnInit {
 
   getTabPipeLineTime(hrefPath) {
     this.pipeLineTime.next(hrefPath);
+  }
+
+  goBackToHome() {
+   this.location.back();
   }
 
 }
