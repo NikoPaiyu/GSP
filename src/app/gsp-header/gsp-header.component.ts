@@ -1,4 +1,4 @@
-import {Component, OnInit, Output , EventEmitter} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import {Router} from '@angular/router';
 import { Location} from '@angular/common';
 
@@ -11,7 +11,15 @@ export class GspHeaderComponent implements OnInit {
 
   @Output() pipeLineTime = new EventEmitter();
   @Output() pipeLineStage = new EventEmitter();
+  @Output() opportunity = new EventEmitter();
+  @Output() quotes = new EventEmitter();
   @Output() opportunityModal = new EventEmitter();
+
+  @Input() headerName: string ;
+  @Input() headerDescription: string ;
+  @Input() ifPipeline: boolean ;
+  @Input() ifOpportunity: boolean ;
+
 
   constructor(private router: Router , private location: Location) { }
 
@@ -25,12 +33,22 @@ export class GspHeaderComponent implements OnInit {
     this.pipeLineTime.next(hrefPath);
   }
 
-  goBackToHome() {
-   this.location.back();
-  }
-
   getOpportunityModal(opportunityModal: string) {
     this.opportunityModal.next(opportunityModal);
+  }
+
+  getTabOpportunity(hrefPath){
+    this.opportunity.next(hrefPath);
+  }
+
+  getTabQuotes(hrefPath){
+    this.quotes.next(hrefPath);
+  }
+
+
+
+  goBackToHome() {
+    this.location.back();
   }
 
 }

@@ -10,14 +10,14 @@
 
           <div class="header-title">
             <button class="backButton" (click)="goBackToHome()">Back</button>
-            <h6>Pipeline</h6>
-            <span>See changes by time and stage</span>
+            <h6>{{headerName}}</h6>
+            <span>{{headerDescription}}</span>
           </div>
         </div>
 
         <div class="col-md-6">
 
-          <div class="header-select">
+          <div class="header-select" *ngIf="ifPipeline">
 
               <ul class="header-select-list">
 
@@ -61,12 +61,21 @@
 
         <div class="col-md-6">
 
-          <ul class="nav nav-tabs">
+          <ul class="nav nav-tabs" *ngIf="ifPipeline">
             <li class="nav-item">
               <a class="nav-link active" data-toggle="tab" (click)="getTabPipeLineTime('pipeLineByName')" href="#pipeLineByName">Pipeline By Time</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" (click)="getTabPipeLineStage('pipeLineByStage')"  href="#pipeLineByStage">Pipeline By Stage</a>
+            </li>
+          </ul>
+
+          <ul class="nav nav-tabs" *ngIf="ifOpportunity">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" (click)="getTabOpportunity('opportunityDetail')" href="#opportunityDetail">Opportunity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" (click)="getTabQuotes('quotes')"  href="#quotes">Quotes</a>
             </li>
           </ul>
 
@@ -77,16 +86,24 @@
 
           <div class="pipeline-action">
 
-            <ul class="pipeline-action-list">
+            <ul class="pipeline-action-list" *ngIf="ifPipeline">
+
+            <li>
+              <button class="roundButtonDark refreshIcon" ></button>
+            </li>
+            <li>
+              <button class="roundButtonDark filterIcon " ></button>
+            </li>
+            <li>
+              <button class="roundButtonPrimary addIcon" (click)="getOpportunityModal('opportunityModal')" data-toggle="modal" data-target="#opportunityModal" ></button>
+            </li>
+
+          </ul>
+
+            <ul class="pipeline-action-list" *ngIf="ifOpportunity">
 
               <li>
-                <button class="roundButtonDark refreshIcon" ></button>
-              </li>
-              <li>
-                <button class="roundButtonDark filterIcon " ></button>
-              </li>
-              <li>
-                <button class="roundButtonPrimary addIcon" (click)="getOpportunityModal('opportunityModal')" data-toggle="modal" data-target="#opportunityModal" ></button>
+                <button class="roundButtonPrimary editIcon"></button>
               </li>
 
             </ul>

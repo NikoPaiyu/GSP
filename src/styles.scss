@@ -201,6 +201,13 @@ button {
   background-size: $primary-icon-background-image-size;
 }
 
+.editIcon {
+  background-image: url('./assets/icons/editWhite.svg');
+  background-repeat: $primary-icon-background-repeat;
+  background-position: $primary-icon-background-image-position;
+  background-size: $primary-icon-background-image-size;
+}
+
 .filterIcon {
   background-image: url('./assets/icons/filter.svg');
   background-repeat: $secondary-icon-background-repeat;
@@ -214,6 +221,53 @@ button {
   background-position: center top 10px ;
   background-size: $secondary-icon-background-image-size;
 }
+
+
+.omPlaybookIcon {
+  background-image: url('./assets/icons/refresh.svg');
+  background-repeat: $secondary-icon-background-repeat;
+  background-position: center top 10px ;
+  background-size: $secondary-icon-background-image-size;
+}
+
+.altifyIcon {
+  background-repeat: $secondary-icon-background-repeat;
+  background-position: center top 10px ;
+  background-size: 60px;
+}
+
+.omPlaybookIcon {
+  background-image: url('./assets/icons/omPlaybook.svg');
+}
+
+.assessmentIcon {
+  background-image: url('./assets/icons/assessment.svg');
+}
+
+.relationshipsIcon {
+  background-image: url('./assets/icons/relationships.svg');
+}
+
+.criteriaIcon {
+  background-image: url('./assets/icons/criteria.svg');
+}
+
+.insightIcon {
+  background-image: url('./assets/icons/insight.svg');
+}
+
+.strategyIcon {
+  background-image: url('./assets/icons/strategy.svg');
+}
+
+.actionsIcon {
+  background-image: url('./assets/icons/actions.svg');
+}
+
+.tiIcon {
+  background-image: url('./assets/icons/t&i.svg');
+}
+
 
 /*
     Missclennious Button Element Icons
@@ -251,10 +305,7 @@ button {
   .stage-list-item {
     background-color: $color-tertiary;
     padding: 15px 15px 9px;
-    position: sticky;
-    top: 0;
     z-index: 1040;
-
 
     h6 {
       font-family: $font-primary-regular;
@@ -275,8 +326,6 @@ button {
     height: 5px;
     padding: 0px;
     margin-top: 5px;
-    position: sticky;
-    top: 0;
     z-index: 1040;
   }
 
@@ -352,14 +401,11 @@ button {
 
     }
 
-
-
-
-
-
   }
 
 }
+
+
 
 
 

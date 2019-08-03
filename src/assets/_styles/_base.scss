@@ -4,7 +4,6 @@
 /*
     Base Select
 */
-
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -15,6 +14,13 @@ select {
     Base UL
 */
 
+button {
+  cursor: pointer;
+}
+
+/*
+    Base UL
+*/
 ul {
   list-style: none;
   padding:0px;
@@ -24,7 +30,6 @@ ul {
 /*
     Base Fonts
 */
-
 .fontSize24{
   font-size: 24px;
 }
@@ -97,6 +102,22 @@ ul {
   margin-top : 100px;
 }
 
+.marginTop50{
+  margin-top : 100px;
+}
+
+.marginTop20{
+  margin-top : 20px;
+}
+
+.marginTop30{
+  margin-top : 30px;
+}
+
+.marginTop10{
+   margin-top : 10px;
+ }
+
 
 
 /*
@@ -117,7 +138,7 @@ ul {
 }
 
 .modal-header {
-  border-bottom: 0px !important;
+  border-bottom: 0 !important;
   padding: 2rem 2rem 1.5rem;
 }
 
@@ -229,6 +250,66 @@ ul {
       border-bottom:3px solid $color-secondary;
       font-family: $font-primary-medium;
     }
+  }
+
+}
+
+/*
+    Custom Card Design
+*/
+
+.custom-card {
+  background-color: $color-tertiary;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px #eee;
+  margin-bottom: 30px;
+
+  .custom-card-header {
+    border-bottom : 1px solid $color-border ;
+    font-size: 18px;
+    padding: 20px 20px 15px;
+    font-family: $font-primary-medium;
+  }
+
+  .custom-card-content{
+    padding:20px
+  }
+
+  /*
+    Table  Design
+*/
+
+  .table th {
+   padding-bottom: 8px !important;
+  }
+
+  .table td {
+    padding-bottom: 15px !important;
+    padding-top: 18px;
+    border-top: 0 !important;
+    height: 50px;
+  }
+
+  .table thead th {
+    font-family: $font-primary-regular;
+    font-size: 14px;
+    font-weight: normal;
+    color: $font-secondary-color;
+    border-top: 0 !important;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .table tbody td {
+    font-family: $font-primary-regular;
+    font-size: 14px;
+  }
+
+  .table-striped tbody tr:nth-of-type(even){
+    background-color:$color-light !important;
+  }
+
+  .table-striped tbody tr:nth-of-type(odd){
+    background-color:$color-tertiary !important;
   }
 
 }

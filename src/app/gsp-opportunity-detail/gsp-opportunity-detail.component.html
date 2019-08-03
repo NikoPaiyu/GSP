@@ -1,0 +1,20 @@
+<app-gsp-header [ifOpportunity]="true" [ifPipeline]="false" [headerName]="'Opportunity Detail'" [headerDescription]="'Edit opportunity and create quote'" (opportunity)="opportunityTab=$event" (quotes)="quotesTab=$event"></app-gsp-header>
+
+
+<div class="opportunity-detail-wrapper">
+
+
+
+    <div class="tab-content">
+      <div class="tab-pane container active" [id]="opportunityTab" >
+         <app-gsp-opportunity-detail-info></app-gsp-opportunity-detail-info>
+      </div>
+      <div class="tab-pane container fade" [id]="quotesTab">
+        <app-gsp-opportunity-detail-quotes></app-gsp-opportunity-detail-quotes>
+      </div>
+
+    </div>
+
+
+
+</div>

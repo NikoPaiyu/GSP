@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {OpportunityService} from '../core/_api/opportunity.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-gsp-opportunities',
@@ -7,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GspOpportunitiesComponent implements OnInit {
 
+  constructor(private opportunityApi: OpportunityService , private route: Router) { }
 
-  modalNameFromParent = 'exampleModal';
+  opportunityArr = [];
 
   sampleObj = [
     {
@@ -204,15 +207,26 @@ export class GspOpportunitiesComponent implements OnInit {
       'cost' : 'USD289,637.00'
     }
 
-  ]
-
-
-  constructor() { }
+  ];
+  idCount = 0 ;
 
 
   ngOnInit() {
+    // this.opportunityApi.getOpportunities().subscribe(opportunityArrayResponse => {
+    //   this.opportunityArr = opportunityArrayResponse;
+    // });
+
+    this.sampleObj.forEach(sampleObj => {
+      sampleObj['id'] = this.idCount + 1;
+      this.idCount++;
+    });
+
+    console.log(this.sampleObj);
+
   }
 
 
-
+  goToDetailView(opportunityId: number) {
+    this.route.navigate(['/opportunityDetail/' + `${opportunityId}`]).then(r => console.log(r));
+  }
 }

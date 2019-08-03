@@ -11,11 +11,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NotifierModule } from 'angular-notifier';
 import { GspDialogsComponent } from './gsp-dialogs/gsp-dialogs.component';
 import { GspPipelineComponent } from './gsp-pipeline/gsp-pipeline.component';
-import { GspPipilinebytimeComponent } from './gsp-pipilinebytime/gsp-pipilinebytime.component';
-import { GspPipilinebystageComponent } from './gsp-pipilinebystage/gsp-pipilinebystage.component';
+import { GspPipilinebytimeComponent } from './gsp-pipiline-time/gsp-pipilinebytime.component';
+import { GspPipilinebystageComponent } from './gsp-pipiline-stage/gsp-pipilinebystage.component';
 import { GspHeaderComponent } from './gsp-header/gsp-header.component';
 import {GoTopButtonModule} from 'ng2-go-top-button';
-
+import {OpportunityService} from './core/_api/opportunity.service';
+import {HttpClientModule} from '@angular/common/http';
+import {SharedService} from './core/_shared/shared.service';
+import { GspOpportunityDetailComponent } from './gsp-opportunity-detail/gsp-opportunity-detail.component';
+import { GspOpportunityDetailInfoComponent } from './gsp-opportunity-detail-info/gsp-opportunity-detail-info.component';
+import { GspOpportunityDetailQuotesComponent } from './gsp-opportunity-detail-quotes/gsp-opportunity-detail-quotes.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,10 @@ import {GoTopButtonModule} from 'ng2-go-top-button';
     GspPipelineComponent,
     GspPipilinebytimeComponent,
     GspPipilinebystageComponent,
-    GspHeaderComponent
+    GspHeaderComponent,
+    GspOpportunityDetailComponent,
+    GspOpportunityDetailInfoComponent,
+    GspOpportunityDetailQuotesComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +44,10 @@ import {GoTopButtonModule} from 'ng2-go-top-button';
     RouterModule,
     BrowserAnimationsModule,
     NotifierModule,
-    GoTopButtonModule
+    GoTopButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [OpportunityService, SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
