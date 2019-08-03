@@ -1,5 +1,5 @@
 
-<app-gsp-header (pipeLineTime)="pipeLineByTime=$event" (pipeLineStage)="pipeLineByStage=$event" ></app-gsp-header>
+<app-gsp-header (pipeLineTime)="pipeLineByTime=$event" (pipeLineStage)="pipeLineByStage=$event" (opportunityModal)="opportunityModal=$event"  ></app-gsp-header>
 
 <div class="pipeline-wrapper">
 
@@ -18,3 +18,5 @@
   </div>
 
 </div>
+
+<app-gsp-dialogs [opportunityid]="'opportunityModal'"></app-gsp-dialogs>

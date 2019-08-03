@@ -9,6 +9,7 @@ export class GspPipelineComponent implements OnInit {
 
   pipeLineByTime: any;
   pipeLineByStage: any;
+  opportunityModal: any;
 
   constructor() { }
 

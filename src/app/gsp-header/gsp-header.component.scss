@@ -3,7 +3,8 @@
 .header {
   background-color: $color-tertiary;
   padding-top: 25px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
+  box-shadow: 0 2px 2px #eee;
 
   .header-first {
     padding-bottom: 15px;

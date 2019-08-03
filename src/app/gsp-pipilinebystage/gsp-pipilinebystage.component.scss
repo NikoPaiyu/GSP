@@ -6,5 +6,11 @@
     top: -10px;
     height: 40px;
     background-position: right top 0px;
+    display: none;
   }
+
+  &:hover>.close {
+    display: block;
+  }
+
 }

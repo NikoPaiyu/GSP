@@ -11,6 +11,7 @@ export class GspHeaderComponent implements OnInit {
 
   @Output() pipeLineTime = new EventEmitter();
   @Output() pipeLineStage = new EventEmitter();
+  @Output() opportunityModal = new EventEmitter();
 
   constructor(private router: Router , private location: Location) { }
 
@@ -26,6 +27,10 @@ export class GspHeaderComponent implements OnInit {
 
   goBackToHome() {
    this.location.back();
+  }
+
+  getOpportunityModal(opportunityModal: string) {
+    this.opportunityModal.next(opportunityModal);
   }
 
 }

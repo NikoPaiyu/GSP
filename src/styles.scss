@@ -87,6 +87,7 @@ button {
     border-radius: $button-element-radius;
     font-family: $font-primary-medium ;
     border: 0;
+  cursor: pointer;
 }
 
 .editButton {
@@ -132,6 +133,7 @@ button {
   padding-top: $clearButton-element-padding-top;
   font-family: $font-primary-regular;
   margin-left: 15px !important;
+  cursor: pointer;
 }
 
 .backButton {
@@ -185,6 +187,7 @@ button {
   opacity: 1 !important;
   padding: 0.1rem;
   outline: none;
+  cursor: pointer;
 }
 
 /*
@@ -250,7 +253,7 @@ button {
     padding: 15px 15px 9px;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 1040;
 
 
     h6 {
@@ -274,7 +277,7 @@ button {
     margin-top: 5px;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 1040;
   }
 
   .substage-list-item {
