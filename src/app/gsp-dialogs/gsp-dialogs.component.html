@@ -60,40 +60,15 @@ Filter Opportunity Popup
         </button>
       </div>
       <div class="modal-body">
-
-        <label class="radio-container "><span>All</span>
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="radio-container "><span>Renewal</span>
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="radio-container "><span>Renewal at risk</span>
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="radio-container "><span>Prospect or New Business</span>
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="radio-container "><span>Next 30 Days</span>
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="radio-container "><span>Next 90 Days</span>
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-
+        <ng-container *ngFor ="let radio of filterOptionsArr">
+          <label class="radio-container "><span>{{radio.filterName}}</span>
+            <input type="checkbox" (change)="getFilterItem(radio)">
+            <span class="checkmark"></span>
+          </label>
+        </ng-container>
       </div>
       <div class="modal-footer">
-        <button type="button" class="primaryButton">Save Filter</button>
+        <button type="button" class="primaryButton" (click)="saveFilterOptions()">Save Filter</button>
         <button type="button" class="cancelButton" data-dismiss="modal">Close</button>
       </div>
     </div>

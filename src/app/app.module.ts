@@ -21,6 +21,7 @@ import {SharedService} from './core/_shared/shared.service';
 import { GspOpportunityDetailComponent } from './gsp-opportunity-detail/gsp-opportunity-detail.component';
 import { GspOpportunityDetailInfoComponent } from './gsp-opportunity-detail-info/gsp-opportunity-detail-info.component';
 import { GspOpportunityDetailQuotesComponent } from './gsp-opportunity-detail-quotes/gsp-opportunity-detail-quotes.component';
+import { GspFilterComponent } from './gsp-filter/gsp-filter.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { GspOpportunityDetailQuotesComponent } from './gsp-opportunity-detail-qu
     GspHeaderComponent,
     GspOpportunityDetailComponent,
     GspOpportunityDetailInfoComponent,
-    GspOpportunityDetailQuotesComponent
+    GspOpportunityDetailQuotesComponent,
+    GspFilterComponent
   ],
   imports: [
     BrowserModule,

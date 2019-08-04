@@ -12,6 +12,8 @@ export class GspOpportunitiesComponent implements OnInit {
   constructor(private opportunityApi: OpportunityService , private route: Router) { }
 
   opportunityArr = [];
+  filterArr: any;
+
 
   sampleObj = [
     {

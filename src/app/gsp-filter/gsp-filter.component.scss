@@ -1,0 +1,37 @@
+@import "../../assets/_styles/_variables";
+@import "../../assets/_styles/_base";
+
+.filter-list {
+  width: 100%;
+  padding-top:20px;
+
+  .filter-list-item {
+    text-align: left;
+    background-color: $color-primary;
+    border-radius: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+    width: auto;
+    color: $color-tertiary;
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: 10px;
+
+
+    .closeChips{
+      display: none;
+
+    }
+
+    &:hover .closeChips{
+  display: inline-block;
+    }
+
+    &:nth-child(1){
+      margin-left: 0;
+    }
+
+  }
+
+}

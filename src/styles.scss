@@ -191,6 +191,24 @@ button {
 }
 
 /*
+    Chips Close Button
+*/
+
+.closeChips {
+  background-image: url('assets/icons/closeWhite.svg');
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: top 2px left 4px;
+  height: 17px;
+  width: 20px;
+  padding: 0.1rem;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+
+/*
     Rounded Button Element Icons
 */
 
@@ -404,10 +422,6 @@ button {
   }
 
 }
-
-
-
-
 
 .renewal {
     height: 23px;

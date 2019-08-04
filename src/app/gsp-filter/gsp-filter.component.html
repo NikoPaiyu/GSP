@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="filter-list" >
+    <div class="filter-list-item" *ngFor="let filter of filterArr; let i = index">
+      {{filter.filterName}}
+      <button class="closeChips" (click)="removeFilter(i)"></button>
+    </div>
+  </div>
+</div>
+
