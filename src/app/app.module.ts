@@ -13,7 +13,7 @@ import { GspDialogsComponent } from './gsp-dialogs/gsp-dialogs.component';
 import { GspPipelineComponent } from './gsp-pipeline/gsp-pipeline.component';
 import { GspPipilinebytimeComponent } from './gsp-pipiline-time/gsp-pipilinebytime.component';
 import { GspPipilinebystageComponent } from './gsp-pipiline-stage/gsp-pipilinebystage.component';
-import { GspHeaderComponent } from './gsp-header/gsp-header.component';
+import { GspHeaderComponent } from './gsp-header-with-tabs/gsp-header.component';
 import {GoTopButtonModule} from 'ng2-go-top-button';
 import {OpportunityService} from './core/_api/opportunity.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -22,6 +22,14 @@ import { GspOpportunityDetailComponent } from './gsp-opportunity-detail/gsp-oppo
 import { GspOpportunityDetailInfoComponent } from './gsp-opportunity-detail-info/gsp-opportunity-detail-info.component';
 import { GspOpportunityDetailQuotesComponent } from './gsp-opportunity-detail-quotes/gsp-opportunity-detail-quotes.component';
 import { GspFilterComponent } from './gsp-filter/gsp-filter.component';
+import {FormsModule} from '@angular/forms';
+import { GspHeaderWihtoutTabsComponent } from './gsp-header-wihtout-tabs/gsp-header-wihtout-tabs.component';
+import { GspOpportunityToolAssessmentComponent } from './gsp-opportunity-tool-assessment/gsp-opportunity-tool-assessment.component';
+import { GspOpportunityAssessmentOpportunityComponent } from './gsp-opportunity-tool-assessment/gsp-opportunity-assessment-opportunity/gsp-opportunity-assessment-opportunity.component';
+import { GspOpportunityAssessmentCompeteComponent } from './gsp-opportunity-tool-assessment/gsp-opportunity-assessment-compete/gsp-opportunity-assessment-compete.component';
+import { GspOpportunityAssessmentWinningComponent } from './gsp-opportunity-tool-assessment/gsp-opportunity-assessment-winning/gsp-opportunity-assessment-winning.component';
+import { GspOpportunityAssessmentWorthWinningComponent } from './gsp-opportunity-tool-assessment/gsp-opportunity-assessment-worth-winning/gsp-opportunity-assessment-worth-winning.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +46,14 @@ import { GspFilterComponent } from './gsp-filter/gsp-filter.component';
     GspOpportunityDetailComponent,
     GspOpportunityDetailInfoComponent,
     GspOpportunityDetailQuotesComponent,
-    GspFilterComponent
+    GspFilterComponent,
+    GspHeaderWihtoutTabsComponent,
+    GspOpportunityToolAssessmentComponent,
+    GspOpportunityAssessmentOpportunityComponent,
+    GspOpportunityAssessmentCompeteComponent,
+    GspOpportunityAssessmentWinningComponent,
+    GspOpportunityAssessmentWorthWinningComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -47,7 +62,8 @@ import { GspFilterComponent } from './gsp-filter/gsp-filter.component';
     BrowserAnimationsModule,
     NotifierModule,
     GoTopButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [OpportunityService, SharedService],
   bootstrap: [AppComponent]

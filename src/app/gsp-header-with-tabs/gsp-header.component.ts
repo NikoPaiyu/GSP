@@ -19,11 +19,15 @@ export class GspHeaderComponent implements OnInit {
   @Input() headerDescription: string ;
   @Input() ifPipeline: boolean ;
   @Input() ifOpportunity: boolean ;
+  @Input() ifPipelinePage: boolean ;
+  @Input() ifAltifyPage: boolean ;
 
 
   constructor(private router: Router , private location: Location) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 
   getTabPipeLineStage(hrefPath) {
     this.pipeLineStage.next(hrefPath);
@@ -44,8 +48,6 @@ export class GspHeaderComponent implements OnInit {
   getTabQuotes(hrefPath){
     this.quotes.next(hrefPath);
   }
-
-
 
   goBackToHome() {
     this.location.back();

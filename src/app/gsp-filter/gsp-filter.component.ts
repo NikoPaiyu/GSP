@@ -1,4 +1,5 @@
-import { Component, OnInit , Input } from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import {SharedService} from '../core/_shared/shared.service';
 
 
 @Component({
@@ -8,14 +9,32 @@ import { Component, OnInit , Input } from '@angular/core';
 })
 export class GspFilterComponent implements OnInit {
 
-  @Input() filterArr: [] = [] ;
+  filterArr: any[];
 
-  constructor() { }
+  constructor(private shared: SharedService) {
+  }
 
   ngOnInit() {
+    this.gettingFilterItems();
   }
 
-  removeFilter(i: number) {
-    this.filterArr.splice(i, 1);
+  gettingFilterItems() {
+    this.shared.selectedFilterArrayResponse.subscribe(filterArr => {
+      this.filterArr = filterArr;
+    });
   }
+
+  removeFilter(filterObj: any , index: number) {
+
+    // Updating the Filter Object
+    filterObj.selected = false;
+
+    // Deleting from the array
+    this.filterArr.splice(index, 1);
+
+    // Updating the Global Shared Array
+    this.shared.setSelectedFilterArray(this.filterArr);
+
+  }
+
 }

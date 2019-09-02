@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {OpportunityService} from '../core/_api/opportunity.service';
 import {Router} from '@angular/router';
+import {GspDialogsComponent} from '../gsp-dialogs/gsp-dialogs.component';
 
 @Component({
   selector: 'app-gsp-opportunities',
@@ -9,11 +10,9 @@ import {Router} from '@angular/router';
 })
 export class GspOpportunitiesComponent implements OnInit {
 
-  constructor(private opportunityApi: OpportunityService , private route: Router) { }
+  constructor(private opportunityApi: OpportunityService , private route: Router ) {}
 
-  opportunityArr = [];
   filterArr: any;
-
 
   sampleObj = [
     {
@@ -210,25 +209,19 @@ export class GspOpportunitiesComponent implements OnInit {
     }
 
   ];
+
   idCount = 0 ;
 
-
   ngOnInit() {
-    // this.opportunityApi.getOpportunities().subscribe(opportunityArrayResponse => {
-    //   this.opportunityArr = opportunityArrayResponse;
-    // });
-
     this.sampleObj.forEach(sampleObj => {
       sampleObj['id'] = this.idCount + 1;
       this.idCount++;
     });
-
-    console.log(this.sampleObj);
-
   }
 
 
   goToDetailView(opportunityId: number) {
     this.route.navigate(['/opportunityDetail/' + `${opportunityId}`]).then(r => console.log(r));
   }
+
 }

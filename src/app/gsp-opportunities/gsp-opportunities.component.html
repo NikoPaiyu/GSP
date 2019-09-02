@@ -43,7 +43,7 @@
 
     <div class="opportunity-action">
 
-        <button class="roundButtonPrimary addIcon" data-toggle="modal" data-target="#opportunityModal"></button>
+        <button class="roundButtonPrimary addIcon" data-toggle="modal" data-target="#opportunityModal" (click)="refreshingModalBeforeOpening()"></button>
         <button class="roundButtonDark filterIcon" data-toggle="modal" data-target="#filterModal"></button>
 
     </div>
@@ -51,7 +51,7 @@
   </div>
 
   <ng-container>
-    <app-gsp-filter [filterArr]="filterArr"></app-gsp-filter>
+    <app-gsp-filter ></app-gsp-filter>
   </ng-container>
 
   <div class="opportunity-list-wrapper">
@@ -114,4 +114,5 @@
 </div>
 
 
-<app-gsp-dialogs (selectedFilterArr)="filterArr=$event"  [opportunityid]="'opportunityModal'" [filterid]="'filterModal'"></app-gsp-dialogs>
+<app-gsp-dialogs [opportunityid]="'opportunityModal'" [filterid]="'filterModal'"></app-gsp-dialogs>
+

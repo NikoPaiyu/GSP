@@ -1,0 +1,35 @@
+<div class="header">
+
+    <div class="header-first">
+
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-md-12">
+
+            <div [ngStyle]="{'background-image' : getHeaderBrandUrl(headerName)}" class="header-image"></div>
+
+            <div class="header-title">
+              <button [ngStyle]="{'color' : getTitleColor(headerName),'background-image' : 'url(' + getImageUrl(headerName) + ')'}" class="backButton" (click)="goBack()">Back</button>
+              <h6>{{headerName}}</h6>
+            </div>
+
+            <div class="header-action">
+
+              <div class="header-assessment">
+                <button type="button" class="primaryButton" (click)="saveAssessment()">Save Assessment</button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+

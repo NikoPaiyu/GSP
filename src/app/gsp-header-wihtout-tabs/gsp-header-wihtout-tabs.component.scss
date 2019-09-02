@@ -1,0 +1,52 @@
+@import "../../assets/_styles/variables";
+
+.header {
+  background-color: $color-tertiary;
+  padding-top: 15px;
+  padding-bottom: 0;
+  box-shadow: 0 2px 2px #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .header-first {
+    padding-bottom: 15px;
+
+
+    .header-image {
+      background-image: url('../../assets/icons/assessment.svg');
+      background-size: 50px;
+      background-position: center left 10px;
+      background-repeat: no-repeat;
+      height: 50px;
+      width: 80px;
+      float: left;
+    }
+
+    .header-title {
+      float: left;
+
+      h6 {
+        font-size: $header-title-font-size;
+        color: $font-default-color;
+        font-family: $font-primary-medium;
+        margin-bottom: 0;
+      }
+
+    }
+
+    .header-action {
+      float: right;
+
+      .header-assessment {
+
+        .primaryButton {
+          background-color: $altify-assessment;
+        }
+
+      }
+
+    }
+
+  }
+}

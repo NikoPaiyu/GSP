@@ -1,0 +1,73 @@
+
+<div class="wrapper">
+
+  <app-gsp-header-wihtout-tabs [headerName]="'Assessment'"></app-gsp-header-wihtout-tabs>
+
+  <div class="container">
+    <div class="altify-content">
+
+      <!-- Place for Progress Bar -->
+
+      <div class="row">
+
+        <div class="col-md-4">
+
+          <div class="altify-topic">
+
+            <ul class="altify-topic-list">
+
+              <li *ngFor="let topic of questionTopicList">
+                <h6>{{topic.title}}</h6>
+                <ng-container>
+                  <span style="float: right;color: #333333">{{topic.completedQuestions}}/{{topic.totalQuestions}}</span>
+                </ng-container>
+                <span>{{topic.description}}</span>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-8">
+
+          <div class="altify-question">
+
+            <ul class="altify-question-list">
+
+              <li *ngFor="let question of questionList;let i = index">
+                <h6>{{question.title}}</h6>
+                <span>{{question.description}}</span>
+
+                <div class="altify-question-list-action">
+
+                  <label class="radio-container">
+                    <span>Yes</span>
+                    <input type="radio" name="{{i}}"  (click)="testingRadiobox($event)">
+                    <span class="checkmark"></span>
+                  </label>
+
+                  <label class="radio-container">
+                    <span>No</span>
+                    <input type="radio" name="{{i}}" >
+                    <span class="checkmark"></span>
+                  </label>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
